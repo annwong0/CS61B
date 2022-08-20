@@ -1,4 +1,4 @@
-package lecture.lecture03;
+package lecture;
 
 class IntList {
     public int first;
@@ -45,6 +45,11 @@ class IntList {
             return L;
         }
         return new IntList(L.first + x, incrList(L.rest, x));
+    }
+
+    /* add elem as the first element in the list */
+    public IntList addFirst(int elem) {
+        return new IntList(elem, this);
     }
 
     public static void main(String[] args) {
